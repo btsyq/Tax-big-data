@@ -1,0 +1,218 @@
+doctype html
+html
+	head
+		title 数据审核
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/dataAcquisition/dataAuditing.css')
+	body
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left1.pug
+			.content 
+				.box
+					button.tabs.t_box1.active 已审核
+					button.tabs.t_box2 待审核
+					button.tabs.cf.t_box3 未报
+					.cont_box.box1
+						.inputs
+							span 报送类型
+							.select_box.big#sel1
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							span.lsp1 年份
+							.select_box.small#sel2
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							span.lsp1 期间
+							input(type="text" class="small")
+						.inputs
+							span.lsp2 报送期
+							.select_box.big#sel3
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							span 模糊查询
+							input(type="text" class="big")
+							button.orange 查&nbsp;&nbsp;询
+						.inputs
+							span 时报日期
+							input(type="text" id="d4311" class="small w95" value="2016-05-11" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\\'d4312\\')||\\'2020-10-01\\'}'})")
+							span.w38 至
+							input(type="text" id="d4312" class="small w95 mgr" value="2016-05-16" onFocus="WdatePicker({minDate:'#F{$dp.$D(\\'d4311\\')}',maxDate:'2020-10-01'})")
+							span 选择单位
+							input(type="text" class="big")
+							button.white 导&nbsp;&nbsp;出
+						.mytable
+							table
+								- for (var i = 0; i < 8; i++)
+									if(i == 0)
+										tr
+											th 序号
+											th 所属单位
+											th 报送者
+											th 模板名称
+											th 数据量
+											th 报送周期
+											th 报送期
+											th 报送状态
+											th 明细
+											th 备注
+									else
+										tr
+											td #{i}
+											td 本级财政局
+											td 本级财政局
+											td 工商局-股权转让信息表
+											td 12
+											td 季
+											td 2015年1季度
+											td.green 已报已审
+											td
+												a(href="#") 明细查询
+											td 自动审核通过
+					.cont_box.box2
+						.inputs
+							span 报送类型
+							.select_box.big#sel4
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							span.lsp1 年份
+							.select_box.small#sel5
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							span.lsp1 期间
+							input(type="text" class="small")
+						.inputs
+							span.lsp2 报送期
+							.select_box.big#sel6
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							span 模糊查询
+							input(type="text" class="big")
+							button.orange 查&nbsp;&nbsp;询
+						.inputs
+							span 时报日期
+							input(type="text" class="small w95" value="2017-11-11" onFocus="WdatePicker({isShowClear:false,readOnly:true})")
+							span.w38 至
+							input(type="text" class="small w95 mgr" value="2017-11-11" onFocus="WdatePicker({isShowClear:false,readOnly:true})")
+							span 选择单位
+							input(type="text" class="big")
+							button.white 导&nbsp;&nbsp;出
+						.mytable
+							table
+								- for (var i = 0; i < 8; i++)
+									if(i == 0)
+										tr
+											th 序号
+											th  
+												.mycheck
+													input(type="checkbox" id="checkbox0")
+													label(for="checkbox0")
+											th 所属单位
+											th 报送者
+											th 模板名称
+											th 数据量
+											th 报送周期
+											th 报送期
+											th 报送状态
+											th 明细
+											th 备注
+									else
+										tr
+											td #{i}
+											td
+												.mycheck
+													input(type="checkbox" id="checkbox"+i)
+													label(for="checkbox"+i)
+											td 本级财政局
+											td 本级财政局
+											td 工商局-股权转让信息表
+											td 12
+											td 季
+											td 2015年1季度
+											td.green 已报已审
+											td
+												a(href="#") 明细查询
+											td 自动审核通过
+						button.blue 审核
+					.cont_box.box3
+						.inputs
+							span 报送类型
+							.select_box.big#sel7
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							span.lsp1 年份
+							.select_box.small#sel8
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							span.lsp1 期间
+							input(type="text" class="small")
+						.inputs
+							span.lsp2 报送期
+							.select_box.big#sel9
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							span 模糊查询
+							input(type="text" class="big")
+							button.orange 查&nbsp;&nbsp;询
+						.inputs
+							span 时报日期
+							input(type="text" class="small w95" value="2017-11-11" onFocus="WdatePicker({isShowClear:false,readOnly:true})")
+							span.w38 至
+							input(type="text" class="small w95 mgr" value="2017-11-11" onFocus="WdatePicker({isShowClear:false,readOnly:true})")
+							span 选择单位
+							input(type="text" class="big")
+							button.white 导&nbsp;&nbsp;出
+						.mytable
+							table
+								- for (var i = 0; i < 8; i++)
+									if(i == 0)
+										tr
+											th 序号
+											th 所属单位
+											th 报送者
+											th 模板名称
+											th 数据量
+											th 报送周期
+											th 报送期
+											th 报送状态
+											th 明细
+											th 备注
+									else
+										tr
+											td #{i}
+											td 本级财政局
+											td 本级财政局
+											td 工商局-股权转让信息表
+											td 12
+											td 季
+											td 2015年1季度
+											td.green 已报已审
+											td
+												a(href="#") 明细查询
+											td 自动审核通过
+		include ./../layout/footer.pug
+	script(src="../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../../libs/My97DatePicker/WdatePicker.js")
+	script(src="./../../js/dataAcquisition/dataAuditing.js")

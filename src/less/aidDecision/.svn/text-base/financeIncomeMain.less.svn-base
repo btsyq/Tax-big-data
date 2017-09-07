@@ -1,0 +1,22 @@
+.box1{
+  width: 100%;
+  #chartMain{height: 470px;}
+}
+.box2{
+  margin-top: 12px;
+  width: 100%;
+  #chartType{height: 430px;}
+}
+.seleYear{
+  z-index: 1000;
+    position: absolute;
+    right: 20px;
+    top:75px;
+    span{
+      float: left;
+      display: inline-block;
+      height: 28px;
+      line-height: 28px;
+      font-size: 14px;
+    }
+}

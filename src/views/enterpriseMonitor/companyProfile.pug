@@ -1,0 +1,50 @@
+doctype html
+html
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left2.pug
+			.content 
+				.box#main
+					.cont_box.box1
+						.box_tit
+							.bt_in
+								p
+								h3 企业变动分行业统计
+						#chart1
+					.cont_box.box2.marR12.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 注册类型
+						#chart2.chartCon
+					.cont_box.box2.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 注册状态
+						#chart3.chartCon
+					.cont_box.box2.marR12.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 企业分地区统计
+						#chart4.chartCon
+					.cont_box.box2.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 企业分行业统计
+						#chart5.chartCon
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/echarts/shandong.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/enterpriseMonitor/companyProfile.js")

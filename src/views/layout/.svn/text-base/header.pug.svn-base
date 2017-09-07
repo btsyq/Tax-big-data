@@ -1,0 +1,18 @@
+.header
+	.header-box
+		a(class='header-left' href='../home/homePage.html')
+			i.logo
+			span 涉税大数据平台
+		.header-right
+			.user-info
+				i.user-logo.iconfont &#xe6df;
+				span.user-name Admin
+				span.user-time 2017-08-08 08:00
+			.person-set
+				i.person-set-logo.iconfont &#xe66b;
+				span.person-set-tit 个人设置
+			a(class='exit' href='../login/login.html') 退出
+				
+			
+			
+				

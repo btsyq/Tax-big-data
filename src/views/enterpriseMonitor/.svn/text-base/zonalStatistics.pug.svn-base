@@ -1,0 +1,64 @@
+doctype html
+html
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+		link(rel='stylesheet', href='../../../libs/css/jquery-ui.min.css')
+		link(rel='stylesheet', href='../../../libs/css/uiSlider.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left2.pug
+			.content 
+				.box#main
+					.cont_box.box1(style="position: relative;")
+						.seleYear
+							span 年份：
+							.select_box.marR12#sel1
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							span 地区：
+							.select_box#sel2
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							i.iconfont.fr.goBack(title='返回') &#xe60e;
+							.bt_in
+								p
+								h3 XX区纳税规模统计
+						div.cf(style="position:relative;overflow:hidden")
+							.dividingLine(style="position:absolute;")
+							#chartTaxesBar.chartCon.fl(style="width:55%")
+							#chartTaxesPie.chartCon.fl(style="width:45%")
+						#timeline.changeTime
+					.cont_box.box1.marT12(style="position: relative;")
+						.changeType
+							span.marR12.active 企业数量
+							span 纳税额
+						.seleYear
+							span 年份：
+							.select_box#sel3
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							.bt_in
+								p
+								h3 XX区企业规模趋势图
+						#chartScale.chartCon2
+						#changeYear.slidCon
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/js/jquery-ui.min.js")
+	script(src="./../../../libs/js/sliderUI.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/enterpriseMonitor/zonalStatistics.js")

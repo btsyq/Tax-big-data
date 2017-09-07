@@ -1,0 +1,84 @@
+doctype html
+html
+	head
+		title 数据质量检测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/dataAcquisition/dataAssessment.css')
+	body
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left1.pug
+			.content 
+				.box
+					.tool_bar
+						button.tool_btns#newc
+							i.iconfont &#xe6bf;
+							span 新建
+						button.tool_btns#compile
+							i.iconfont &#xe683;
+							span 编辑
+						button.tool_btns#delete
+							i.iconfont &#xe61b;
+							span 删除
+						.time_rad
+							.myradio
+								input(type="radio" id="radio5" name="tst")
+								label(for="radio5")
+							span 业务规则
+						.time_rad
+							.myradio
+								input(type="radio" id="radio4" name="tst")
+								label(for="radio4")
+							span 基本规则
+						.time_rad
+							span 规则 :
+					.cont_box.box1
+						.mytable
+							table
+								- for (var i = 0; i < 11; i++)
+									if(i == 0)
+										tr
+											th 序号
+											th 规则名称
+											th 说明
+									else
+										tr
+											td #{i}
+											td
+											td
+		include ./../layout/footer.pug
+		#newc_box
+			.cont
+				.list
+					.inputs
+						.inputsin
+							span 规则名称
+							input(type="text")
+						.inputsin
+							span 规则编码
+							input(type="text")
+					.inputs
+						.inputsin
+							span 规则类型
+							.select_box#sel1
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+					.inputst
+						span 规则说明
+						textarea
+					.inputst
+						span SQL
+						textarea
+					.inputsb
+						button.orange 校验
+						button.blue 保存
+
+	script(src="../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../../libs/layer/layer.js")
+	script(src="./../../js/dataAcquisition/dataAssessment.js")

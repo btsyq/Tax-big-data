@@ -1,0 +1,57 @@
+doctype html
+html
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left2.pug
+			.content 
+				.box#main
+					.cont_box.box2.marR12(style="position: relative;")
+						.seleYear
+							.select_box.marR12#sel1
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							.select_box#sel2
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							.bt_in
+								p
+								h3 企业分地区统计
+						#chartRegion.chartCon
+					.cont_box.box2
+						.box_tit
+							.bt_in
+								p
+								h3 企业分注册类型
+						#chartRegister.chartCon
+					.cont_box.box1.marT12(style="position: relative;")
+						.seleYear
+							span 年份：
+							.select_box#sel3
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							.bt_in
+								p
+								h3 企业分行业
+						#chartIndustry
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/echarts/shandong.js")
+	script(src="./../../../libs/layer/layer.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/enterpriseMonitor/regionalStatistics.js")

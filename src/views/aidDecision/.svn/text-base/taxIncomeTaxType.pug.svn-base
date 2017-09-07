@@ -1,0 +1,43 @@
+doctype html
+html
+	head
+		title 辅助决策
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/aidDecision/taxIncomeTaxType.css')
+		link(rel='stylesheet', href='../../../libs/css/jquery-ui.min.css')
+		link(rel='stylesheet', href='../../../libs/css/uiSlider.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left4.pug
+			.content 
+				.box#main
+					.cont_box.box1
+						.box_tit
+							.bt_in
+								p
+								h3 柱状图
+						#chart1
+						#date-slider
+					.cont_box.box2
+						.box_tit
+							.bt_in
+								p
+								h3 同比/环比图
+						#chart2
+						.white
+							#btnLeft
+							#stop
+							#btnRight
+							#banner.banner
+								.class-white.line
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../../libs/js/jquery-ui.min.js")
+	script(src="./../../../libs/js/sliderUI.js")
+	script(src="./../../../libs/layer/layer.js")
+	script(src="./../../js/aidDecision/taxIncomeTaxType.js")

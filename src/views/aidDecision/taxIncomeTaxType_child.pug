@@ -1,0 +1,24 @@
+doctype html
+html.rtHtml
+	head
+		title 辅助决策
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/aidDecision/taxIncomeAreaDivide_child.css')
+	body
+		#main.frbox
+			div(style="position: relative;")
+				.seleYear.seleYear2
+					span 年份：
+					.select_box#sel1.marR12
+						.sel_show
+						.sel_btn
+							i.iconfont(onselectstart="return false") &#x3438;
+						ul
+				#chartType.chartCon3
+				<!--button.orange 返回-->
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/layer/layer.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/aidDecision/taxIncomeTaxType_child.js")

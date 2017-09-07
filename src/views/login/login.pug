@@ -1,0 +1,46 @@
+doctype html
+html
+	head
+		title 涉税大数据平台
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/login.css')
+	body(data-num='0')
+		.login_header
+			i.login_logo
+			span 涉税大数据平台
+		.login_banner#login_banner
+			.login_banner_left
+			.login_banner_right
+				.login_box_title 用户登录
+				.login_box_con
+					div(class='login_username')
+						.login_username-icon
+							i.iconfont &#xe602;
+						input(placeholder='用户名')
+					div(class='login_username login_password')
+						.login_username-icon
+							i.iconfont &#xe62c;
+						input(placeholder='密码')
+					.login_box_tip.cf
+						.login_box_tip_left
+							.mycheck
+								input(type="checkbox" id="checkbox0")
+								label(for="checkbox0")
+							span 自动登录
+						.login_box_tip_right 忘记密码？
+					a(class='login_btn' href='../home/homePage.html') 登&nbsp;&nbsp;录
+		.login_footer#login_footer
+			.login_footer_box
+				span.erweima
+				.footer_ifo
+					p 九次方大数据集团有限公司
+					p 北京海淀区王庄路1号清华同方科技广场D座西楼16层
+					p 400-819-0919 
+					p.copy Copyright 2015 by Jusfoun.com. All Right Reserved 
+	script(src="../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="../../../libs/js/placeHolder.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/login/login.js")
+				
+			

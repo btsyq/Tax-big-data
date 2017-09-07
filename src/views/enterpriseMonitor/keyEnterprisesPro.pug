@@ -1,0 +1,57 @@
+doctype html
+html
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left2.pug
+			.content 
+				.box#main
+					.cont_box.box1
+						.box_tit
+							.bt_in
+								p
+								h3 重点企业同比/环比分析
+						#chart1
+					.cont_box.box2.marR12.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 重点企业纳税占比
+						#chart2.chartCon
+					.cont_box.box2.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 减税人员规模
+						#chart3.chartCon
+							.liquidfill
+								.liquidfill_chanrt#liquidfill1
+							.liquidfill
+								.liquidfill_chanrt#liquidfill2
+							.liquidfill
+								.liquidfill_chanrt#liquidfill3
+					.cont_box.box2.marR12.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 行业占比
+						#chart4.chartCon
+					.cont_box.box2.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 地区占比
+						#chart5.chartCon
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/echarts/liquidfill-chart.js")
+	script(src="./../../../libs/echarts/echarts-liquidfill.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/enterpriseMonitor/keyEnterprisesPro.js")

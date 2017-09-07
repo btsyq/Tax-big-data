@@ -1,0 +1,169 @@
+doctype html
+html
+	head
+		title 采集模板设计
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/dataAcquisition/acquisitionModule.css')
+	body
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left1.pug
+			.content 
+				.box
+					.tool_bar
+						button.tool_btns#refresh
+							i.iconfont &#xe646;
+							span 刷新
+						button.tool_btns#newc
+							i.iconfont &#xe6bf;
+							span 新建
+						button.tool_btns#compile
+							i.iconfont &#xe683;
+							span 编辑
+						button.tool_btns#delete
+							i.iconfont &#xe61b;
+							span 删除
+						button.tool_btns#tablemod
+							i.iconfont &#xe629;
+							span 表样
+						button.tool_btns#enable
+							i.iconfont &#xe67e;
+							span 启用
+						button.tool_btns#maintain
+							i.iconfont &#xe61e;
+							span 维护
+						.time_rad
+							.myradio
+								input(type="radio" id="radio5" name="tst")
+								label(for="radio5")
+							span 月
+						.time_rad
+							.myradio
+								input(type="radio" id="radio4" name="tst")
+								label(for="radio4")
+							span 季
+						.time_rad
+							.myradio
+								input(type="radio" id="radio3" name="tst")
+								label(for="radio3")
+							span 半年
+						.time_rad
+							.myradio
+								input(type="radio" id="radio2" name="tst")
+								label(for="radio2")
+							span 年
+						.time_rad
+							.myradio
+								input(type="radio" id="radio1" name="tst" checked)
+								label(for="radio1")
+							span 全部
+					.cont_box.box1
+						.mytable
+							table
+								- for (var i = 0; i < 11; i++)
+									if(i == 0)
+										tr
+											th 序号
+											th 
+												.mycheck
+													input(type="checkbox" id="checkbox0")
+													label(for="checkbox0")
+											th 报表名称
+											th 报表周期
+											th 开始日期
+											th 结束日期
+											th 甄别类型
+									else
+										tr
+											td #{i}
+											td
+												.mycheck
+													input(type="checkbox" id="checkbox"+i)
+													label(for="checkbox"+i)
+											td 地税局—地税纳税人变动登记
+											td 月
+											td 2017-1-1
+											td 2017-1-30
+											td 人工+自动
+		include ./../layout/footer.pug
+		#newc_box
+			.cont
+				.tit 编辑信息
+				.list
+					.inputs
+						.inputsin
+							span 报表名称
+							input(type="text")
+						.inputsin
+							span 报送周期
+							.select_box#sel1
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+					.inputs
+						.inputsin
+							span 开始日期
+							.select_box#sel2
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.inputsin
+							span 结束日期
+							.select_box#sel3
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+					.inputs
+						.inputsin
+							span 甄别类型
+							.select_box#sel4
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+				.tit 期间信息
+				.list
+					.inputs
+						button.tabs.active 期间
+						button.tabs 单位
+						button.white 停&nbsp;&nbsp;用
+						button.orange 启&nbsp;&nbsp;用
+					.mytable
+						table
+							- for (var i = 0; i < 3; i++)
+								if(i == 0)
+									tr
+										th 序号
+										th 期间编码
+										th 期间名称
+										th 开始报送日期
+										th 截止报送日期
+										th 所属日期
+										th 所属期止
+										th 启用
+								else
+									tr
+										td #{i}
+										td 123
+										td 123
+										td 123
+										td 123
+										td 123
+										td 123
+										td
+											.mycheck
+												input(type="checkbox" id="checkbox2"+i)
+												label(for="checkbox2"+i)
+					.inputsb
+						button.blue 保存
+
+	script(src="../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../../libs/layer/layer.js")
+	script(src="./../../js/dataAcquisition/acquisitionModule.js")

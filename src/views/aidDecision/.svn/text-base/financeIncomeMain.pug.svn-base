@@ -1,0 +1,45 @@
+doctype html
+html
+	head
+		title 辅助决策
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/aidDecision/financeIncomeMain.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left4.pug
+			.content 
+				.box#main
+					.cont_box.box1.rel
+						.seleYear
+							span 年份：
+							.select_box#sel1
+								.sel_show.w70 2017年
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							.bt_in
+								p
+								h3 财政收入总体分析-总体图
+						#chartMain
+					.cont_box.box2.rel
+						.seleYear
+							span 年份：
+							.select_box#sel2
+								.sel_show.w70 2017年
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							.bt_in
+								p
+								h3 财政收入总体分析-同比图
+						#chartType
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/aidDecision/financeIncomeMain.js")

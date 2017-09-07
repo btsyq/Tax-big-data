@@ -1,0 +1,57 @@
+doctype html
+html
+	head
+		title 涉税大数据平台
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/home/homePage.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			.content.homecont 
+				.box
+					.cont_box.box1
+						.select_box#sel1
+							.sel_show
+							.sel_btn
+								i.iconfont(onselectstart="return false") &#x3438;
+							ul
+							
+						.mycheck
+							input(type="checkbox" id="checkbox1")
+							label(for="checkbox1")
+							
+						.myradio
+							input(type="radio" id="radio1" name="tst" checked)
+							label(for="radio1")
+						.myradio
+							input(type="radio" id="radio2" name="tst")
+							label(for="radio2")
+						
+						.mytable
+							table
+								- for (var i = 0; i < 5; i++)
+									if(i == 0)
+										tr
+											th 头部
+											th 头部
+											th 头部
+											th 头部
+									else
+										tr
+											td #{i}
+											td 123
+											td 123
+											td 123
+					.cont_box.box2
+						.box_tit
+							.bt_in
+								p
+								h3 政府收入分析
+					.cont_box.box3
+					.cont_box.box4
+					.cont_box.box5
+	include ./../layout/footer.pug
+	script(src="./../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/home/demo.js")

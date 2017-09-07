@@ -1,0 +1,75 @@
+doctype html
+html
+	head
+		title 数据报送
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/dataAcquisition/dataDelivery.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left1.pug
+			.content 
+				.box
+					.cont_box.box1
+						.inputs
+							span 报表名称
+							.select_box#sel1
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							input(type="text" id="ipt1")
+						.inputs
+							span 报送期
+							.select_box#sel2
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							input(type="text" id="ipt2")
+							button.orange 查&nbsp;&nbsp;询
+						.mytable
+							table
+								- for (var i = 0; i < 11; i++)
+									if(i == 0)
+										tr
+											th 序号
+											th 模版名称
+											th 报送期
+											th 报送状态
+											th 模板(表样)
+											th 已报数据
+											th 报送
+											th 备注
+									else
+										tr
+											td #{i}
+											td 工商局－股权转让信息表
+											td 2015年1季度
+											td 未报
+											td 
+												a(href="#" class="green") 下载
+											td
+											td
+												a(href="#" class="uploader") 报送上传
+											td
+		include ./../layout/footer.pug
+		#upload
+			.cont
+				.tit
+					i.iconfont &#xe642;
+					span 报表《工商局-股权转让表》
+				p 请选择上报文件
+				.form
+					form(action="" method="post")
+						input(type="file" id="filefield" onchange="document.getElementById('textfield').value=this.value")
+						input(type="text" id="textfield")
+						input(type="button" value="浏  览")
+						input(type="submit" value="提  交")
+	script(src="../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../../libs/layer/layer.js")
+	script(src="./../../js/dataAcquisition/dataDelivery.js")

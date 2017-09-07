@@ -1,0 +1,55 @@
+doctype html
+html
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+	body
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left2.pug
+			.content 
+				#main.box
+					.cont_box.box1.regInfor
+						.infoLine.txtAlignL
+							.con.cf
+								span 工商登记名称
+								input(type="text").select_box
+							.con
+								span 行业
+								#sel1.select_box
+									.sel_show
+									.sel_btn
+										i.iconfont(onselectstart="return false") &#x3438;
+									ul
+							.con
+								span 地区
+								#sel2.select_box
+									.sel_show
+									.sel_btn
+										i.iconfont(onselectstart="return false") &#x3438;
+									ul
+						.infoLine.txtAlignC
+							button.active.marR12 查 询
+							button 清 空
+						.mytable
+							table
+								tr
+									- var thItems =["序号","统一社会信用代码","工商登记名称","登记注册类型","行业","注册状态","登记日期","注册资本","法定代表人"]
+									each thItem in thItems
+										th= thItem
+								tr
+									-var tdItems1 = ["1","XXXX","XXXX","XXXX","XXXX","XXXX","2015-1-1","5000万","张某某"]
+									each tdItem1 in tdItems1
+										td= tdItem1
+								tr
+									-var tdItems2 = ["2","XXXX","XXXX","XXXX","XXXX","XXXX","2015-1-1","5000万","张某某"]
+									each tdItem2 in tdItems2
+										td= tdItem2
+	include ./../layout/footer.pug 
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/enterpriseMonitor/DifferentialBusiness.js")

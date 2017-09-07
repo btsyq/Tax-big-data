@@ -1,0 +1,22 @@
+doctype html
+html
+	head
+		title 采集模板设计
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/dataAcquisition/workflow.css')
+	body
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left1.pug
+			.content 
+				.box
+					.cont_box.box1
+		include ./../layout/footer.pug
+
+
+	script(src="../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/dataAcquisition/workflow.js")

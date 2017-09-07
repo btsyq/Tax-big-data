@@ -1,0 +1,12 @@
+doctype html
+html.rtHtml
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+	body
+		#chartNormal.hei490
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts-all.js")
+	script(src="./../../js/enterpriseMonitor/normalEnterprise.js")

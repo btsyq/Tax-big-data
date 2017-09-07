@@ -1,0 +1,33 @@
+.navbar
+	ul.navbar-list.cf
+		li
+			.shadow
+			a(href='../home/homePage.html')
+				i.index
+				span 首页
+		li
+			.shadow
+			a(href='../dataAcquisition/acquisitionModule.html')
+				i.data-acquisition
+				span 数据采集
+		li
+			.shadow
+			a(href='../enterpriseMonitor/companyProfile.html')
+				i.enterprise-monitoring
+				span 企业监测
+		li
+			.shadow
+			a(href='')
+				i.risk-warning
+				span 风险预警
+		li
+			.shadow
+			a(href='../aidDecision/incomeProfile.html')
+				i.aid-decision-making
+				span 辅助决策
+		li
+			.shadow
+			a(href='/workflow/flow/loadFlowList')
+				i.enterprise-monitoring
+				span 工作流
+	

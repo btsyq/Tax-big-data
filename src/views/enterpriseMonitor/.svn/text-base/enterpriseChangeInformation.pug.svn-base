@@ -1,0 +1,47 @@
+doctype html
+html
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left2.pug
+			.content 
+				.box#main
+					.cont_box.box1
+						.box_tit
+							.bt_in
+								p
+								h3 企业变动信息
+						#chartTrend.hei519
+					.cont_box.box2.marR12.marT12(style="position: relative;")
+						.changeType
+							span.marR12.active 新增
+							span 注销
+						.box_tit
+							.bt_in
+								p
+								h3 分地区统计
+						#chartRegion.chartCon
+					.cont_box.box2.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 分注册类型
+						#chartRegtype.chartCon
+					.cont_box.box1.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 分行业统计
+						#chartIndustry.hei519
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/echarts/shandong.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/enterpriseMonitor/enterpriseChangeInformation.js")

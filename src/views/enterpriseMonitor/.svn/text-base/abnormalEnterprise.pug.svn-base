@@ -1,0 +1,31 @@
+doctype html
+html
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left2.pug
+			.content 
+				.box#main
+					.cont_box.box1
+						.box_tit
+							.bt_in
+								p
+								h3 非正常企业对比统计
+						#chartAbnormal.hei368
+					.cont_box.box1.marT12
+						.box_tit
+							.bt_in
+								p
+								h3 企业对比分析
+						#chartNormal.hei490.demoImg
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/enterpriseMonitor/abnormalEnterprise.js")

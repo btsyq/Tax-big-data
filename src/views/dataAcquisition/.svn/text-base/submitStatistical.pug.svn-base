@@ -1,0 +1,137 @@
+doctype html
+html
+	head
+		title 报送统计
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/dataAcquisition/submitStatistical.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left1.pug
+			.content 
+				.box
+					.cont_box.box1
+						.box_tit
+							.bt_in
+								p
+								h3 报送占比统计
+						.charts#chart1
+					.cont_box.box2
+						.box_tit
+								.bt_in
+									p
+									h3 未报送统计
+						.charts#chart2
+					.cont_box.box3
+						.box_tit
+								.bt_in
+									p
+									h3 高级查询
+									.up_down
+										i.iconfont(onselectstart="return false") &#x3438;
+						.input_box#input_box
+							.inputs
+								.inputsin.is1
+									span 报送类型
+									.select_box#sel1
+										.sel_show.big
+										.sel_btn
+											i.iconfont(onselectstart="return false") &#x3438;
+										ul
+								.inputsin.is2
+									span.twoword 年份
+									.select_box#sel1
+										.sel_show.small
+										.sel_btn
+											i.iconfont(onselectstart="return false") &#x3438;
+										ul
+									span.twoword.t2 期间
+									.select_box#sel1
+										.sel_show.small
+										.sel_btn
+											i.iconfont(onselectstart="return false") &#x3438;
+										ul
+								.inputsin.is3
+									.mycheck
+										input(type="checkbox" id="checkbox1")
+										label(for="checkbox1")
+									span 启用实报日期
+									input(type="text" class="small" id="d4311" value="2016-05-11" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\\'d4312\\')||\\'2020-10-01\\'}'})")
+									span.ml —
+									input(type="text" class="small" id="d4312" value="2016-05-16" onFocus="WdatePicker({minDate:'#F{$dp.$D(\\'d4311\\')}',maxDate:'2020-10-01'})")
+							.inputs
+								.inputsin.is1
+									span.threeword 报送期
+									.select_box#sel1
+										.sel_show.big
+										.sel_btn
+											i.iconfont(onselectstart="return false") &#x3438;
+										ul
+								.inputsin.is2
+									span 模糊查询
+									input(type="text" class="bigger")
+								.inputsin.is3
+									.mycheck
+										input(type="checkbox" id="checkbox2")
+										label(for="checkbox2")
+									span 启用应报日期
+									input(type="text" class="small" id="d4313" value="2016-05-11" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\\'d4314\\')||\\'2020-10-01\\'}'})")
+									span.ml —
+									input(type="text" class="small" id="d4314" value="2016-05-16" onFocus="WdatePicker({minDate:'#F{$dp.$D(\\'d4313\\')}',maxDate:'2020-10-01'})")
+							.inputs
+								.inputsin.is1
+									span 选择单位
+									input(type="text" class="big")
+								.inputsin.is2
+									span 报送状态
+									.select_box#sel1
+										.sel_show.bigger
+										.sel_btn
+											i.iconfont(onselectstart="return false") &#x3438;
+										ul
+								.inputsin.is3
+									.mycheck
+										input(type="checkbox" id="checkbox3")
+										label(for="checkbox3")
+									span 启用所属日期
+									input(type="text" class="small" id="d4315" value="2016-05-11" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\\'d4316\\')||\\'2020-10-01\\'}'})")
+									span.ml —
+									input(type="text" class="small" id="d4316" value="2016-05-16" onFocus="WdatePicker({minDate:'#F{$dp.$D(\\'d4315\\')}',maxDate:'2020-10-01'})")
+							.inputs
+								button.orange 查询
+								button.white#export 导出
+						.mytable
+							table
+								- for (var i = 0; i < 5; i++)
+									if(i == 0)
+										tr
+											th 序号
+											th 模版名称
+											th 报送人员
+											th 报送单位
+											th 所属部门
+											th 应报
+											th 已报
+											th 准期已报
+											th 逾期已报
+											th 未报
+									else
+										tr
+											td #{i}
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+		include ./../layout/footer.pug
+	script(src="../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../../libs/My97DatePicker/WdatePicker.js")
+	script(src="./../../js/dataAcquisition/submitStatistical.js")

@@ -1,0 +1,46 @@
+doctype html
+html
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left2.pug
+			.content 
+				.box#main
+					.cont_box.box1(style="position: relative;")
+						.seleYear
+							span 年份：
+							.select_box.marR12#sel1
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							i.iconfont.fr.goBack(title='返回') &#xe60e;
+							.bt_in
+								p
+								h3 XX行业企业增减统计
+						#chartNumber.chartCon2
+					.cont_box.box1.marT12(style="position: relative;")
+						.seleYear
+							span 年份：
+							.select_box#sel2
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							.bt_in
+								p
+								h3 XX行业企业纳税额的趋势折线图
+						#chartTrend.chartCon2
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/enterpriseMonitor/industryStatistics.js")

@@ -1,0 +1,107 @@
+button.tabs{
+    height: 30px;
+    width: 130px;
+    border-radius: 30px;
+    border: none;
+    float: left;
+    margin-right: 14px;
+    color: #fff;
+    background: #9da6b8;
+    margin-bottom: 19px; 
+    font-size: 16px;
+    &:hover,&.tabs.active{
+        background: #3373e6;
+    }
+}
+
+.cont_box{
+//  height: 665px;
+    width: 100%;
+    overflow-x: auto;
+    
+    &.box2,&.box3{
+        display: none;
+    }
+    
+    .inputs{
+        height: 42px;
+        line-height: 42px;
+        
+        span{
+            display: inline-block;
+            float: left;
+            width: 82px;
+            &.w38{
+                width: 38px;
+                text-align: center;
+            }
+            &.lsp1{
+                letter-spacing: 26px;
+            }
+            &.lsp2{
+                letter-spacing: 7px;
+            }
+        }
+        .select_box{
+            margin-top: 6px;
+            &.big{
+                margin-right: 110px;
+               .sel_show{
+                    width: 200px;
+                } 
+            }
+            &.small{
+                margin-right: 34px;
+               .sel_show{
+                    width: 71px;
+                } 
+            }
+        }
+
+        input[type="text"]{
+            border: 1px solid #D2D2D2;
+            border-radius: 6px;
+            height: 28px;
+            display: block;
+            float: left;
+            margin-top: 6px;
+            outline: none;
+            text-indent: 10px;
+            &.small{
+                width: 98px;
+            }
+            &.small.w95{
+                width: 95px;
+            }
+            &.mgr{
+                margin-right: 110px;
+            }
+            &.big{
+                width: 314px;
+            }
+        }
+        button{
+            float: left;
+            margin-top: 6px;
+            margin-left: 80px;
+        }
+    }
+    
+    
+    &.box2{
+        table tr th:nth-of-type(2){
+            width: 10px;
+        }
+    }
+    
+    .mytable {
+        margin-top: 35px;
+        .mycheck{
+            top: 5px;
+        }
+    }
+    
+    button.blue{
+        margin: 32px auto;
+    }
+}

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 270
+/svn/01%E7%A0%94%E5%8F%91%E4%B8%AD%E5%BF%83/!svn/ver/16478/20%E9%A1%B9%E7%9B%AE%E5%8F%8A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/%E6%B6%89%E7%A8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81/src/views/dataAcquisition
+END
+downloadDataQuery.pug
+K 25
+svn:wc:ra_dav:version-url
+V 292
+/svn/01%E7%A0%94%E5%8F%91%E4%B8%AD%E5%BF%83/!svn/ver/16478/20%E9%A1%B9%E7%9B%AE%E5%8F%8A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/%E6%B6%89%E7%A8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81/src/views/dataAcquisition/downloadDataQuery.pug
+END
+submitStatistical.pug
+K 25
+svn:wc:ra_dav:version-url
+V 292
+/svn/01%E7%A0%94%E5%8F%91%E4%B8%AD%E5%BF%83/!svn/ver/16478/20%E9%A1%B9%E7%9B%AE%E5%8F%8A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/%E6%B6%89%E7%A8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81/src/views/dataAcquisition/submitStatistical.pug
+END
+templateQueries.pug
+K 25
+svn:wc:ra_dav:version-url
+V 290
+/svn/01%E7%A0%94%E5%8F%91%E4%B8%AD%E5%BF%83/!svn/ver/15119/20%E9%A1%B9%E7%9B%AE%E5%8F%8A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/%E6%B6%89%E7%A8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81/src/views/dataAcquisition/templateQueries.pug
+END
+workflow.pug
+K 25
+svn:wc:ra_dav:version-url
+V 283
+/svn/01%E7%A0%94%E5%8F%91%E4%B8%AD%E5%BF%83/!svn/ver/14932/20%E9%A1%B9%E7%9B%AE%E5%8F%8A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/%E6%B6%89%E7%A8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81/src/views/dataAcquisition/workflow.pug
+END
+submittedStatistics.pug
+K 25
+svn:wc:ra_dav:version-url
+V 294
+/svn/01%E7%A0%94%E5%8F%91%E4%B8%AD%E5%BF%83/!svn/ver/16478/20%E9%A1%B9%E7%9B%AE%E5%8F%8A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/%E6%B6%89%E7%A8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81/src/views/dataAcquisition/submittedStatistics.pug
+END
+dataDelivery.pug
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/01%E7%A0%94%E5%8F%91%E4%B8%AD%E5%BF%83/!svn/ver/15411/20%E9%A1%B9%E7%9B%AE%E5%8F%8A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/%E6%B6%89%E7%A8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81/src/views/dataAcquisition/dataDelivery.pug
+END
+acquisitionModule.pug
+K 25
+svn:wc:ra_dav:version-url
+V 292
+/svn/01%E7%A0%94%E5%8F%91%E4%B8%AD%E5%BF%83/!svn/ver/14932/20%E9%A1%B9%E7%9B%AE%E5%8F%8A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/%E6%B6%89%E7%A8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81/src/views/dataAcquisition/acquisitionModule.pug
+END
+dataAuditing.pug
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/01%E7%A0%94%E5%8F%91%E4%B8%AD%E5%BF%83/!svn/ver/16478/20%E9%A1%B9%E7%9B%AE%E5%8F%8A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/%E6%B6%89%E7%A8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81/src/views/dataAcquisition/dataAuditing.pug
+END
+dataAssessment.pug
+K 25
+svn:wc:ra_dav:version-url
+V 289
+/svn/01%E7%A0%94%E5%8F%91%E4%B8%AD%E5%BF%83/!svn/ver/16195/20%E9%A1%B9%E7%9B%AE%E5%8F%8A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/%E6%B6%89%E7%A8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81/src/views/dataAcquisition/dataAssessment.pug
+END

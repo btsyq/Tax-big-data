@@ -1,0 +1,57 @@
+doctype html
+html
+	head
+		title 涉税大数据平台
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/home/homePage.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			.content.homecont 
+				.box
+					.cont_box.box1
+						.box_tit
+							.bt_in
+								p
+								h3 税额及预测项目数量
+						#chart1
+					.cont_box.box2
+						.box_tit
+							.bt_in
+								p
+								h3 减税热力图
+						#chart2.chartCon
+					.cont_box.box3
+						.box_tit
+							.bt_in
+								p
+								h3 内资、外资、港澳台资投资情况
+						#chart3.chartCon
+					.cont_box.box4
+						.box_tit
+							.bt_in
+								p
+								h3 服务业占比
+						#chart4.chartCon
+					.cont_box.box5
+						.box_tit
+							.bt_in
+								p
+								h3 减税人员规模
+						#chart5.chartCon
+							.liquidfill
+								.liquidfill_chanrt#liquidfill1
+							.liquidfill
+								.liquidfill_chanrt#liquidfill2
+							.liquidfill
+								.liquidfill_chanrt#liquidfill3
+	include ./../layout/footer.pug
+	script(src="./../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/echarts/liquidfill-chart.js")
+	script(src="./../../../libs/echarts/echarts-liquidfill.js")
+	script(src="./../../../libs/echarts/shandong.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/home/homePage.js")

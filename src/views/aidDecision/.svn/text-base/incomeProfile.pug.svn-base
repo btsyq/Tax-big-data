@@ -1,0 +1,50 @@
+doctype html
+html
+	head
+		title 辅助决策
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/aidDecision/incomeProfile.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left4.pug
+			.content 
+				.box#main
+					.cont_box.box1
+						.box_tit
+							.bt_in
+								p
+								h3 政府收入分析
+						#chart1
+					.cont_box.box2
+						.box_tit
+							.bt_in
+								p
+								h3 税收占比
+						#chart2.chartCon
+					.cont_box.box3
+						.box_tit
+							.bt_in
+								p
+								h3 分注册状态
+						#chart3.chartCon
+					.cont_box.box4
+						.box_tit
+							.bt_in
+								p
+								h3 分地区统计
+						#chart4.chartCon
+					.cont_box.box5
+						.box_tit
+							.bt_in
+								p
+								h3 分行业统计
+						#chart5.chartCon
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/echarts/shandong.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/aidDecision/incomeProfile.js")

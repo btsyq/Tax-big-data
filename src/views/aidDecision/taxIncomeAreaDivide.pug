@@ -1,0 +1,58 @@
+doctype html
+html
+	head
+		title 辅助决策
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/aidDecision/taxIncomeAreaDivide.css')
+		link(rel='stylesheet', href='../../../libs/css/jquery-ui.min.css')
+		link(rel='stylesheet', href='../../../libs/css/uiSlider.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left4.pug
+			.content 
+				.box#main
+					.cont_box.box1
+						.box_tit
+							.bt_in
+								p
+								h3 税收收入分行政区划
+						.chartWrap
+							#chart1
+							.centerLine
+								.line
+							.chartCon
+								.title 税收收入分行政区划统计
+									span.subtitle Top5
+								#chart2
+								.unit 数量(万元)
+						#date-slider
+					.cont_box.box2
+						.box_tit
+							.bt_in
+								p
+								h3#bottom 税收收入分行业统计
+						.chartWrap
+							.chart3Wrap
+								#chart3
+							.centerLine
+								.line
+							.chart4Wrap
+								.title 税收收入分行业统计
+									span.subtitle Top5
+								#chart4
+								.unit 数量(万元)
+						.chartWrap
+							#chart5
+						#date-slider2
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/echarts/shandong.js")
+	script(src="./../../../libs/layer/layer.js")
+	script(src="./../../js/common.js")
+	script(src="./../../../libs/js/jquery-ui.min.js")
+	script(src="./../../../libs/js/sliderUI.js")
+	script(src="./../../js/aidDecision/taxIncomeAreaDivide.js")

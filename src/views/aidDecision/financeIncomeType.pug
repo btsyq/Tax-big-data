@@ -1,0 +1,61 @@
+doctype html
+html
+	head
+		title 辅助决策
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/aidDecision/financeIncomeType.css')
+	body(data-num='0')
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left4.pug
+			.content 
+				.box#main
+					.cont_box.box1.rel
+						.seleYear
+							span 年份：
+							.select_box#sel1
+								.sel_show.w70 2017年
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							.bt_in
+								p
+								h3 分行政区划统计
+						#chart1
+					.cont_box.box2.rel
+						.unit
+							span 收入 (万元)
+						.seleYear
+							span 年份：
+							.select_box#sel2
+								.sel_show.w70 2017年
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							.bt_in
+								p
+								h3 分部门统计
+						#chart2
+					.cont_box.box3.rel
+						.seleYear
+							span 年份：
+							.select_box#sel3
+								.sel_show.w70 2017年
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+						.box_tit
+							.bt_in
+								p
+								h3 分企业统计
+						#chart3
+	include ./../layout/footer.pug
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/echarts/shandong.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/aidDecision/financeIncomeType.js")

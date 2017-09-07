@@ -1,0 +1,127 @@
+doctype html
+html
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+	body
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			.content.homecont 
+				.box.cf
+					.cont_box.defconL
+						.lefT
+							.box_tit
+								.bt_in
+									p
+									h3 条件选择
+							.ltCon
+								.lineCon.cf
+									.spanCon.fl 企业名称
+									.inputCon.fl
+										input(type='text',placeholder='全部',name='comName')
+								.lineCon.cf
+									.spanCon.fl 纳税人识别号
+									.inputCon.fl
+										input(type='text',placeholder='全部',name='ideNumber')
+								.lineCon.cf
+									.spanCon.fl 注册类型
+									.inputCon.fl
+										.select_box#selRegister
+											.sel_show
+											.sel_btn
+												i.iconfont(onselectstart="return false") &#x3438;
+											ul
+								.lineCon.cf
+									.spanCon.fl 行业门类
+									.inputCon.fl
+										.select_box#selCategory
+											.sel_show
+											.sel_btn
+												i.iconfont(onselectstart="return false") &#x3438;
+											ul
+								.lineCon.cf
+									.spanCon.fl 行业大类
+									.inputCon.fl
+										.select_box#selBig
+											.sel_show
+											.sel_btn
+												i.iconfont(onselectstart="return false") &#x3438;
+											ul
+								.lineCon.cf
+									.spanCon.fl 行业小类
+									.inputCon.fl
+										.select_box#selSmall
+											.sel_show
+											.sel_btn
+												i.iconfont(onselectstart="return false") &#x3438;
+											ul
+								.lineCon.cf
+									.spanCon.fl 入库年度
+									.inputCon.fl
+										input(type='text',name='storageYear1',onfocus="WdatePicker({dateFmt:'yyyy'})")
+									.spanLast.fl 年
+								.lineCon.cf
+									.spanCon.fl 入库金额
+										span.smallSpan (万元)
+									.inputCon.fl
+										input(type='text',name='money')
+								.lineCon.cf
+									.spanCon.fl 从
+									.inputCon.fl
+										input#star.selY.fl(type='text',name='selYear1',onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\\'end\\')}'})")
+										.lable --
+										input#end.selY.fr(type='text',name='selYear2',onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\\'star\\')}'})")
+								.lineCon.cf
+									.spanCon.fl 界定年度
+									.inputCon.fl
+										input(type='text',name='definitionYear',onfocus="WdatePicker({dateFmt:'yyyy'})")
+									.spanLast.fl 年
+						.lefB
+							.box_tit
+								.bt_in
+									p
+									h3 选择重点企业查询年度
+							.lbCon
+								.lineCon.cf
+									.spanCon.fl 入库年度
+									.inputCon.fl
+										input(type='text',name='storageYear2',onfocus="WdatePicker({dateFmt:'yyyy'})")
+									.spanLast.fl 年
+								button.orange.query 查 询
+					.cont_box.defconR
+						.mytable
+							table
+								- for (var i = 0; i < 14; i++)
+									if(i == 0)
+										tr
+											th 
+												.mycheck
+													input(type="checkbox" id="checkbox0")
+													label(for="checkbox0")
+											th 序号
+											th 纳税人识别号
+											th 纳税人名称
+											th 入库脱款
+											th 界定标志
+									else
+										tr
+											td
+												.mycheck
+													input(type="checkbox" id="checkbox"+i)
+													label(for="checkbox"+i)
+											td #{i}
+											td
+											td
+											td
+											td
+						.buttonLine.marT17
+							button.blue.marR17 界定
+							button.goBack.white2 返回
+	include ./../layout/footer.pug
+	script(src="./../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../../libs/My97DatePicker/WdatePicker.js")
+	script(src="./../../js/enterpriseMonitor/keyEnterpriseDefinition.js")

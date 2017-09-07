@@ -1,0 +1,33 @@
+doctype html
+html.rtHtml
+	head
+		title 企业监测
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/enterpriseMonitor/companyProfile.css')
+		link(rel='stylesheet', href='../../../libs/css/jquery-ui.min.css')
+		link(rel='stylesheet', href='../../../libs/css/uiSlider.css')
+	body
+		#main.box.frbox
+			.cont_box.box1(style="position: relative;")
+				.seleYear.seleYear2
+					span 注册类型：
+					.select_box#sel1.marR12
+						.sel_show
+						.sel_btn
+							i.iconfont(onselectstart="return false") &#x3438;
+						ul
+					span 可选期间：
+					.select_box#sel2
+						.sel_show
+						.sel_btn
+							i.iconfont(onselectstart="return false") &#x3438;
+						ul
+				#chartScale.chartCon3
+				#changeYear.slidCon
+	include ./../layout/foot.pug
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../../libs/js/jquery-ui.min.js")
+	script(src="./../../../libs/js/sliderUI.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/enterpriseMonitor/registerTypeStatistics.js")

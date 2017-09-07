@@ -1,0 +1,63 @@
+doctype html
+html
+	head
+		title 数据报送
+		include ./../layout/head.pug
+		link(rel='stylesheet', href='../../css/main.css')
+		link(rel='stylesheet', href='../../css/dataAcquisition/templateQueries.css')
+	body
+		include ./../layout/header.pug
+		include ./../layout/navbar.pug
+		.container-fluid
+			include ./../layout/left1.pug
+			.content 
+				.box
+					.cont_box.box1
+						.inputs
+							span 模板名称
+							.select_box#sel1
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							input(type="text" id="ipt1")
+						.inputs
+							span 单位名称
+							.select_box#sel2
+								.sel_show
+								.sel_btn
+									i.iconfont(onselectstart="return false") &#x3438;
+								ul
+							input(type="text" id="ipt2")
+							button.orange 重&nbsp;&nbsp;置
+						.mytable
+							table
+								- for (var i = 0; i < 11; i++)
+									if(i == 0)
+										tr
+											th 序号
+											th  
+												.mycheck
+													input(type="checkbox" id="checkbox0")
+													label(for="checkbox0")
+											th 模版名称
+											th 所属部门
+											th 是否启用
+											th 下载
+									else
+										tr
+											td #{i}
+											td
+												.mycheck
+													input(type="checkbox" id="checkbox"+i)
+													label(for="checkbox"+i)
+											td 模板名称样例
+											td 模板所属部门样例
+											td.green 已启用
+											td
+												a(href="#") 下载
+		include ./../layout/footer.pug
+	script(src="../../../libs/jquery/jquery-3.1.1.min.js")
+	script(src="./../../../libs/echarts/echarts.min.js")
+	script(src="./../../js/common.js")
+	script(src="./../../js/dataAcquisition/templateQueries.js")
